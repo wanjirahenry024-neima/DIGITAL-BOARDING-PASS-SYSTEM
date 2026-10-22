@@ -89,3 +89,4 @@ DB_CONNECTION=sqlite DB_DATABASE=database/database.sqlite php artisan serve
 Password reset emails use Laravel's log mailer by default. In local development, open `storage/logs/laravel.log` to retrieve the reset link.
 
 Laravel's `web` middleware provides sessions and CSRF protection. Registration, login, password reset, flight creation/search, and booking creation validate requests server-side; passwords are hashed by the `User` model. Login is rate-limited. The `passenger`, `staff`, and `admin` middleware protect `/dashboard`, `/flights` and `/bookings`, `/staff`, and `/admin` respectively; accounts with inactive status are denied access. Administrators manage flights at `/admin/flights` and bookings at `/admin/bookings`; passengers search available flights at `/flights` and manage their bookings at `/bookings`. Booking creation and cancellation lock seat inventory in database transactions.
+end
